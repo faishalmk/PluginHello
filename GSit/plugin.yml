@@ -1,0 +1,111 @@
+name: GSit
+version: [4.7.5.0]
+description: Relax with your Friends on nice Seats or Lay around!
+author: Gecolay
+website: https://www.spigotmc.org/resources/62325
+main: me.gsit.main.GSitMain
+api-version: 1.13
+softdepend: [PlotSquared, WorldGuard]
+  
+commands:
+  
+  gsit:
+    
+    usage: /<command>
+    aliases: [sit]
+    description: Sit-Command
+    permission: GSit.SitCommand
+    
+  glay:
+    
+    usage: /<command>
+    aliases: [lay]
+    description: Lay-Command
+    permission: GSit.Lay
+    
+  gcrawl:
+    
+    usage: /<command>
+    aliases: [crawl]
+    description: Crawl-Command
+    permission: GSit.Crawl
+    
+  gswim:
+    
+    usage: /<command>
+    aliases: [swim]
+    description: Swim-Command
+    permission: GSit.Swim
+    
+  gsittoggle:
+    
+    usage: /<command>
+    aliases: [sittoggle]
+    description: Sit-Toggle-Command
+    permission: GSit.SitToggle
+    
+  gsitreload:
+    
+    usage: /<command>
+    aliases: [gsitrl]
+    description: GSit-Config-Reload
+    permission: GSit.GSitReload
+  
+  
+  
+permissions:
+  
+  GSit.*:
+    default: op
+    description: OP-Permission for all Commands and Functions for GSit
+    children:
+      GSit.Sit: true
+      GSit.SitCommand: true
+      GSit.SitPlayer: true
+      GSit.SitToggle: true
+      GSit.Lay: true
+      GSit.Crawl: true
+      GSit.Swim: true
+      GSit.Kick: true
+      GSit.Update: true
+      GSit.GSitReload: true
+      
+  GSit.Sit:
+    default: true
+    description: Main-Sit | Permission
+    
+  GSit.SitCommand:
+    default: true
+    description: Command-Sit | Permission
+    
+  GSit.SitPlayer:
+    default: true
+    description: Player-Sit | Permission
+    
+  GSit.SitToggle:
+    default: true
+    description: Toggle Sit-Ability | Permission
+    
+  GSit.Lay:
+    default: op
+    description: Lay | Permission
+    
+  GSit.Crawl:
+    default: op
+    description: Crawl | Permission
+    
+  GSit.Swim:
+    default: op
+    description: Swim | Permission
+    
+  GSit.Kick:
+    default: op
+    description: Seat-Kick | Permission
+    
+  GSit.Update:
+    default: op
+    description: Get-Update-Notification | Permission
+    
+  GSit.GSitReload:
+    default: op
+    description: Config-Reload-Command | Permission
